@@ -1,0 +1,411 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #333333;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  width: 100%;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 15px;
+
+  background: white;
+  border-bottom: 1px solid #dddddd;
+}
+
+/* ================= LOGO ================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.logo-burger {
+  font-size: 38px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 17px;
+
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+}
+
+.logo-text span {
+  color: #9d2520;
+  font-size: 20px;
+}
+
+.logo-text strong {
+  color: #f28b00;
+  font-size: 21px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.navbar a {
+  text-decoration: none;
+
+  color: #333333;
+
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #e30613;
+}
+
+.cart {
+  position: relative;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.cart-number {
+  position: absolute;
+
+  top: -8px;
+  right: -8px;
+
+  width: 13px;
+  height: 13px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #e30613;
+  color: white;
+
+  border-radius: 50%;
+
+  font-size: 9px;
+  font-weight: bold;
+}
+
+/* ================= INTRO ================= */
+
+.intro {
+  width: 100%;
+
+  text-align: center;
+
+  padding-top: 24px;
+  padding-bottom: 42px;
+}
+
+.intro h1 {
+  margin: 0 0 10px;
+
+  color: #e30613;
+
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+
+  font-size: 39px;
+  letter-spacing: 0.5px;
+}
+
+.intro p {
+  width: 430px;
+  max-width: 90%;
+
+  margin: 0 auto;
+
+  color: #888888;
+
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* ================= BURGER CONTAINER ================= */
+
+.burger-container {
+  width: 100%;
+
+  padding: 0 1px 20px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+/* ================= BURGER CARD ================= */
+
+.burger-card {
+  width: 100%;
+
+  border: 1px solid #dcdcdc;
+
+  border-radius: 4px;
+
+  overflow: hidden;
+
+  background: white;
+}
+
+.burger-card:hover {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= BURGER IMAGE ================= */
+
+.burger-image {
+  width: 100%;
+
+  height: 166px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* ================= CARD CONTENT ================= */
+
+.card-content {
+  padding: 10px;
+}
+
+/* ================= RATING ================= */
+
+.rating-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.stars {
+  color: #f5a900;
+
+  font-size: 14px;
+
+  letter-spacing: 1px;
+}
+
+.empty-stars {
+  color: #d4d4d4;
+}
+
+.heart-button {
+  border: none;
+
+  background: transparent;
+
+  color: #777777;
+
+  font-size: 21px;
+
+  cursor: pointer;
+
+  padding: 0;
+}
+
+.heart-button:hover {
+  color: #e30613;
+}
+
+/* ================= TITLE ================= */
+
+.burger-card h2 {
+  margin: 5px 0 7px;
+
+  color: #333333;
+
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+
+  font-size: 14px;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.description {
+  margin: 0;
+
+  color: #999999;
+
+  font-size: 10px;
+
+  line-height: 15px;
+
+  min-height: 31px;
+}
+
+/* ================= PRICE ================= */
+
+.price-button {
+  margin-top: 8px;
+
+  border: none;
+
+  border-radius: 3px;
+
+  background: #713329;
+
+  color: #f5b51b;
+
+  font-weight: bold;
+
+  font-size: 10px;
+
+  padding: 6px 9px;
+
+  cursor: pointer;
+}
+
+.price-button:hover {
+  background: #51231d;
+}
+
+/* ================= MODAL ================= */
+
+.modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+
+  width: 350px;
+
+  background: white;
+
+  border-radius: 8px;
+
+  padding: 20px;
+
+  text-align: center;
+}
+
+.modal img {
+  width: 100%;
+
+  height: 190px;
+
+  object-fit: cover;
+
+  border-radius: 5px;
+}
+
+.modal h2 {
+  margin: 15px 0 5px;
+}
+
+.modal-stars {
+  color: #f5a900;
+}
+
+.modal p {
+  color: #777777;
+
+  font-size: 13px;
+
+  line-height: 19px;
+}
+
+.close-button {
+  position: absolute;
+
+  right: 10px;
+  top: 7px;
+
+  border: none;
+
+  background: white;
+
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+.modal-price {
+  background: #713329;
+
+  color: #f5b51b;
+
+  border: none;
+
+  padding: 8px 15px;
+
+  border-radius: 4px;
+
+  font-weight: bold;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .burger-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: auto;
+
+    padding: 12px;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .navbar {
+    gap: 15px;
+  }
+
+  .burger-container {
+    grid-template-columns: 1fr;
+
+    padding: 10px;
+  }
+
+  .burger-image {
+    height: 220px;
+  }
+}
